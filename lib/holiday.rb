@@ -3,7 +3,7 @@ require 'pry'
 def second_supply_for_fourth_of_july(holiday_hash)
   # holiday_hash.each do |element|
     puts [:summer][:fourth_of_july][1]
-  end 
+  end
 end
   # given that holiday_hash looks like this:
   # {
@@ -51,9 +51,9 @@ end
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     season_captialize = season.capitalize
-    season.capitalize.to_s 
-    puts 
-    
+    season.capitalize.to_s
+    puts
+
   # iterate through holiday_hash and print items such that your readout resembles:
   # Winter:
   #   Christmas: Lights, Wreath
@@ -69,10 +69,3 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 
 end
-
-
-
-
-
-
-

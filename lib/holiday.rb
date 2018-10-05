@@ -55,9 +55,10 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
-  all_supplies_array = {}
+  all_supplies_array = ()
   array1 = holiday_hash[:winter][:christmas]
   array2 = holiday_hash[:winter][:new_years]
+  all_supplies_array = (array1 + array2)
 end
   #{
   #   :winter => {

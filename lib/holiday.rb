@@ -54,20 +54,17 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holiday|
     puts "#{season.capitalize}:"
       holiday.each do |holiday, supply|
-        puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{supply.join(", ")}"
+        puts "  #{holiday.to_s.split("_").map {|i| i.capitalize}.join(" ")}: #{supply.join(", ")}" #turns holiday symbols to strings, splits them and removes underscores. Then capitalizes and joins strings. Could we use concat here?
       end
   end
 end
 
-  # iterate through holiday_hash and print items such that your readout resembles:
-  # Winter:
-  #   Christmas: Lights, Wreath
-  #   New Years: Party Hats
-  # Summer:
-  #   Fourth Of July: Fireworks, BBQ
-  # etc.
-
 def all_holidays_with_bbq(holiday_hash)
-  # return an array of holiday names (as symbols) where supply lists
-  # include the string "BBQ"
+  holiday_hash.map do |season, holiday|
+    holiday.map do |holiday, supply|
+      if supply.include?("BBQ")
+      end 
+    end 
+  end
+  all_holidays_with_bbq.flatten
 end
